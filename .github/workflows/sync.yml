@@ -50,6 +50,7 @@ jobs:
     - name: Commit and push config.json
       run: |
         rm -rf ./rule/*
+        touch ./rule/.hidefile
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add ./rule/*.json
